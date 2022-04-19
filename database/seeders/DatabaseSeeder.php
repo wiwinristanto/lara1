@@ -34,24 +34,26 @@ class DatabaseSeeder extends Seeder
             'slug' => 'web-design'
         ]);
 
-        User::create([
-            'name'=> 'Wiwin Ristanto  ',
-            'email'=> 'wiwin@gmail.com',
-            'password'=> bcrypt('12345')
-        ]);
+        User::factory(5)->create();
 
-        User::create([
-            'name'=> 'Anzu HZ',
-            'email'=> 'anzu@gmail.com',
-            'password'=> bcrypt('12345')
-        ]);
+        // User::create([
+        //     'name'=> 'Wiwin Ristanto  ',
+        //     'email'=> 'wiwin@gmail.com',
+        //     'password'=> bcrypt('12345')
+        // ]);
+
+        // User::create([
+        //     'name'=> 'Anzu HZ',
+        //     'email'=> 'anzu@gmail.com',
+        //     'password'=> bcrypt('12345')
+        // ]);
 
 
-        User::create([
-            'name'=> 'Putri S',
-            'email'=> 'putri@gmail.com',
-            'password'=> bcrypt('12345')
-        ]);
+        // User::create([
+        //     'name'=> 'Putri S',
+        //     'email'=> 'putri@gmail.com',
+        //     'password'=> bcrypt('12345')
+        // ]);
     
     
         Post::create([
