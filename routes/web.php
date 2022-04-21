@@ -1,7 +1,8 @@
-<?php
+ <?php
 
 
 use App\Models\Category;
+use App\Models\User;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -35,6 +36,7 @@ Route::get('/about', function () {
 
 
 
+
 Route::get('/posts', [PostController::class, 'index']);
 
 //halaman Single Post
@@ -56,5 +58,12 @@ Route::get('/categories/{category:slug}', function(Category $category)
         'title' => $category->name,
         'posts' => $category->posts,
         'category' => $category->name
+    ]);
+});
+
+Route::get('/authors/{user}', function(User $user){
+    return view('posts', [
+        'title'=>'User Posts',
+        'posts'=>$user->posts,
     ]);
 });
